@@ -1,7 +1,7 @@
 import React from "react";
-import rock from "./strength.svg";
-import paper from "./paper.svg";
-import scissors from "./scissors.svg";
+import rock from "./strength.png";
+import paper from "./paper.png";
+import scissors from "./scissors.png";
 
 const Player = ({ weapon }) => {
   return (

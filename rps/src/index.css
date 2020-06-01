@@ -49,8 +49,11 @@ body {
 .player-image {
   height: 200px;
   width: auto;
-  transform: rotate(90deg);
+
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1) rotate(-90deg);
 }
+
 button {
   width: 200px;
   height: 50px;
