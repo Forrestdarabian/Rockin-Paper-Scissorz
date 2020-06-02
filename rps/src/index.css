@@ -166,8 +166,4 @@ button:hover {
   }
 }
 
-@media (min-width: 1047px) {
-  body {
-    overflow: hidden;
-  }
-}
+
