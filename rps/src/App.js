@@ -33,7 +33,7 @@ class App extends React.Component {
     //  LOGIC
 
     if (playerOne === playerTwo) {
-      return "Tie!";
+      return "Tie! Retry?";
     } else if (
       (playerOne === "rock" && playerTwo === "scissors") ||
       (playerOne === "scissors" && playerTwo === "paper") ||
@@ -113,7 +113,7 @@ class App extends React.Component {
               </a>
               from
               <a href="https://www.flaticon.com/" title="Flaticon">
-                <br />
+                <br /> <br />
                 www.flaticon.com
               </a>
             </div>
