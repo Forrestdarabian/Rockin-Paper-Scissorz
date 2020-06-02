@@ -33,7 +33,7 @@ class App extends React.Component {
     //  LOGIC
 
     if (playerOne === playerTwo) {
-      return "Tie! Try again...";
+      return "Tie!";
     } else if (
       (playerOne === "rock" && playerTwo === "scissors") ||
       (playerOne === "scissors" && playerTwo === "paper") ||
@@ -104,15 +104,16 @@ class App extends React.Component {
               </p>
             </div>
             <div>
-              Icons made by{" "}
+              Icons made by
               <a
                 href="https://www.flaticon.com/authors/freepik"
                 title="freepik"
               >
                 freepik
-              </a>{" "}
-              from{" "}
+              </a>
+              from
               <a href="https://www.flaticon.com/" title="Flaticon">
+                <br />
                 www.flaticon.com
               </a>
             </div>
