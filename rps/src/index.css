@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
 * {
-  background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #93b5c6;
+  font-family: "Major Mono Display", monospace;
   padding: 5px;
+  font-weight: bold;
+  border-radius: 0px;
 }
 
 body {
@@ -10,15 +13,67 @@ body {
   margin: 1rem auto;
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
+}
+
+h1.title {
+  background-color: #f0cf65;
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-style: groove;
+  text-decoration: underline;
+  border-color: #bd4f6c;
+}
+
+div.home {
+  background-color: #ddedaa;
+  border-color: #bd4f6c;
+  border-style: groove;
+  padding: 20px;
+}
+
+img.power {
+  width: 2%;
+  background-color: #f0cf65;
+  border-radius: 5px;
+}
+
+div.top {
+  background-color: #d7816a;
+  border-color: #bd4f6c;
+  border-style: groove;
+}
+
+div.middle {
+  background-color: #93b5c6;
+  border-color: #bd4f6c;
+  border-style: groove;
+}
+
+div.layout {
+  background-color: #d7816a;
+  border-color: none;
+  border-color: #bd4f6c;
+
+  border-style: groove;
+}
+
+footer.bottom {
+  background-color: #d7816a;
+  border-style: groove;
+  border-color: #bd4f6c;
+  font-size: smaller;
 }
 
 .player {
-  width: 240px;
-  height: 180px;
+  width: 210px;
+  height: 210px;
   margin: 50px;
-  border-radius: 50%;
+  border-radius: 0%;
   text-align: center;
   display: inline-block;
+  background-color: #d7816a;
 }
 
 .weaponBtn {
@@ -26,10 +81,9 @@ body {
   height: 50px;
   display: inline;
   margin: auto 15px;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 25px;
-  background: #000;
+  color: white;
+  font-size: 15px;
+  background: #bd4f6c;
 }
 
 .player:nth-child(2) {
@@ -41,17 +95,21 @@ body {
   width: 100px;
   height: 55px;
   margin: 10px auto;
-  color: brown;
+  color: black;
   font-size: 18px;
   text-align: center;
   font-weight: bold;
+  text-decoration: underline;
+  background: #f0cf65;
+  border-style: double;
 }
 .player-image {
   height: 200px;
   width: auto;
-
+  background-color: white;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1) rotate(-90deg);
+  border-radius: 0%;
 }
 
 button {
@@ -59,13 +117,57 @@ button {
   height: 50px;
   display: block;
   margin: 10px auto;
-  color: #fff;
+  color: WHITE;
   font-size: 18px;
-  border-radius: 25px;
-  background: #000;
+
+  border-radius: 5px;
+  background: #bd4f6c;
   outline: none;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 725px) {
+  .player-image {
+    width: 85%;
+    height: 85%;
+  }
+
+  .player {
+    width: 25%;
+    height: 50%;
+    margin: 25px;
+  }
+}
+
+@media (max-width: 550px) {
+  h1.title {
+    background-color: #f0cf65;
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: groove;
+    text-decoration: underline;
+  }
+  footer.bottom {
+    font-size: 50%;
+  }
+
+  button {
+    width: 50%;
+  }
+  .weaponBtn {
+    width: 50%;
+  }
+  img.power {
+    display: none;
+  }
+}
+
+@media (min-width: 1047px) {
+  body {
+    overflow: hidden;
+  }
 }

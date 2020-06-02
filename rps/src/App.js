@@ -1,5 +1,6 @@
 import React from "react";
 import Player from "./player";
+import power from "./turn-off.png";
 
 const weapons = ["rock", "paper", "scissors"];
 class App extends React.Component {
@@ -54,18 +55,22 @@ class App extends React.Component {
   render() {
     const { playerOne, playerTwo, winner } = this.state;
     return (
-      <>
-        <h1>Rock Paper Scissors</h1>
-        <div>
+      <div className="home">
+        <div className="top">
+          <h1 className="title">rockin Paper Scissorz</h1>
+        </div>
+        <div className="middle">
           <Player weapon={playerOne} />
           <Player weapon={playerTwo} />
         </div>
-        <div>
+        <div className="layout">
+          <img className="power" src={power} />
+
           <button
             className="weaponBtn"
             onClick={() => this.selectWeapon("rock")}
           >
-            Rock
+            rock
           </button>
           <button
             className="weaponBtn"
@@ -80,21 +85,55 @@ class App extends React.Component {
             Scissors
           </button>
         </div>
-        <div className="winner">{winner ? this.selectWinner() : null}</div>
+        <div className="winner">
+          {winner ? this.selectWinner() : "Insert Coin"}
+        </div>
+        &hArr;
         <button type="button" onClick={this.startGame}>
           Start
         </button>
-        <div>
-          Icons made by{" "}
-          <a href="http://www.freepik.com/" title="Freepik">
-            Freepik
-          </a>{" "}
-          from{" "}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-      </>
+        <footer className="bottom">
+          <div className="footer-container">
+            <div className="copyright">
+              <p>
+                © 2020
+                <a>
+                  <b> Forrest Darabian </b>
+                </a>
+                All Rights Reserved.
+              </p>
+            </div>
+            <div>
+              Icons made by{" "}
+              <a
+                href="https://www.flaticon.com/authors/freepik"
+                title="freepik"
+              >
+                freepik
+              </a>{" "}
+              from{" "}
+              <a href="https://www.flaticon.com/" title="Flaticon">
+                www.flaticon.com
+              </a>
+            </div>
+            <div className="left">
+              <h4 className="something">Contact / Links</h4>
+              <li>
+                {" "}
+                <a href="mailto:forrestdarabian@gmail.com">
+                  <i className="ion-ios-email fa-icons"></i>
+                  Contact Me
+                </a>{" "}
+              </li>
+              <li>
+                <a href="https://www.forrestdarabian.com/">
+                  <i className="fa-angle-double-right"></i>Developers Site
+                </a>
+              </li>
+            </div>
+          </div>
+        </footer>{" "}
+      </div>
     );
   }
 }
